@@ -1,0 +1,36 @@
+1
+
+
+Solution 1 (It works for me; simple but tricky)
+My first suggestion is just using .whl file. You can download pygame.whl, which is another type of installation file, from another computer and move the two files to the computer with no internect connection.
+
+You can download the files here:
+
+.whl file for Window & Python3.9 (for example, pygame-2.1.2-cp39-cp39-win_amd64.whl):
+https://pypi.org/project/pygame/#files
+Actually, .whl is a zipfile. You can unzip the .whl file then you can see three folders: pygame, pygame-2.1.2.data, and pygame-2.1.2.dist-info. You just need pygame folder.
+
+You can copy the folder and paste it to your python project. Then you can simply import pygame. I just tried this way and it works for me. (I even tried to run an example game)
+
+
+
+
+
+
+
+
+Solution 2
+Another suggestion is to download pip and pygame.whl from another computer and move the two files to the computer with no internect connection.
+
+You can download the files here:
+
+pip (for example, pip-22.0.3.tar.gz): https://pypi.org/project/pip/#files
+.whl file for Window & Python3.9 (for example, pygame-2.1.2-cp39-cp39-win_amd64.whl):
+https://pypi.org/project/pygame/#files
+After downloading and moving the two files to the computer with no internect connection, you first unzip the pip-22.0.3.tar.gz and install pip by tying following command inside of the pip folder (pip also has setup.py file):
+
+python setup.py install
+Now, pip has been installed. Then, install using the .whl file using pip in the folder that .whl file exist.
+
+python -m pip install pygame-2.1.2-cp39-cp39-win_amd64.whl
+I hope it help you emjoy pygame.
